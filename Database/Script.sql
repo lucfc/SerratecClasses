@@ -1,3 +1,4 @@
+drop table if exists alunos;
 create table alunos
 		(
 		NumeroMatriculaAluno serial not null primary key, 
@@ -12,7 +13,7 @@ create table livros
 	nomeLivro varchar(50) not null
 );
 
-drop table emprestimo;
+drop table if exists emprestimo;
 
 create table Emprestimo
 (
@@ -22,6 +23,7 @@ create table Emprestimo
 	DataEmprestimo date not null default now()
 );
 
+drop table if exists editora;
 create table  editora
 (
 	codigoEditora serial not null primary key,
@@ -172,10 +174,31 @@ select * from alunos where (cidade='Petrópolis');
 select * from vw_alunosdePetropolis where bairro = 'Itaipava';
 
 
+select * from editora;
 
+select * from livros;
 
+alter table public.livros  alter column codigoeditora drop not null;
 
+insert into livros (codigolivro, nomelivro, codigoisbn, codigoeditora)
+values (5894, 'livro4', 548, null);
 
+update public.livros  set codigoeditora = 100 where codigolivro in (8,14);
+
+update livros set codigoeditora  = null where codigolivro = 1589;
+
+select *from livros;
+
+select 
+	l.*,
+	ed.nome as nomeeditora
+from 
+	livros l left outer join editora ed on (l.codigoeditora = ed.codigoeditora)
+	
+	
+insert into livros 
+
+select * from alunos;
 
 
 
