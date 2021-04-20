@@ -1,0 +1,33 @@
+
+CHAR take 1 byte for each character
+
+Devemos usar o tipo char quando esperamos que a string inserido na coluna é do mesmo tamanho que o comprimento (n)
+
+
+VARCHAR take 1 byte for each character and some extra bytes for holding length information
+
+Devemos usar o varcar quando esperamos que a string inserido seja de tamanho variado 
+
+
+
+ambos podem armazenar até n caracteres, porem ao tentar adicionar uma string com mais q n caracteres, o postgreSQL vai mandar uma mensagem de erro 
+
+Se caso o n nao for especificado,
+
+
+
+ varchar possui um numero ilimitado de tamanho e se assemelha com o tipo text
+
+Diferente do varchar, o tipo char sem a especificação de comprimento maximo (n) é equivalente a char(1)
+
+
+
+Contudo tem uma excessão que é quando todos os caracteres são espaços o postgre trunca os espaços para o tamanho maximo n
+
+
+contudo, por mais que o postgreSQL suporte o tipo mais geral Text, ele nao é um padrão SQL, mas a maioria dos sgbd incluem esse tipo
+
+
+
+
+
