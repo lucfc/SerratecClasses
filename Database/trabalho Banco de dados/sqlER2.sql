@@ -41,11 +41,15 @@ create table produto (
 );
 
 --Criação da tabela de compra
+drop table compra;
 create table compra (
 	compra serial not null primary key,
 	codigoProduto int not null references produto (codigoProduto),
 	codigoPedido int not null references pedido (codigoPedido)
 );
+
+ALTER TABLE compra ADD precoVenda money NOT NULL ;
+ALTER TABLE compra ADD qtdProduto int not null;
 
 --Criação da tabela de pedido
 create table pedido (
@@ -60,5 +64,13 @@ create table categoria (
 	nomeCategoria varchar (100) not null unique,
 	descricaoCategoria varchar(300)
 );
+
+
+insert into compra (codigopedido,codigoproduto, precovenda, qtdproduto)
+values (1,1, 100, 2),
+(2,2, 50, 1),
+(3,3, 20, 3),
+(4,4, 200, 2),
+(5,5, 40, 1);
 
 
