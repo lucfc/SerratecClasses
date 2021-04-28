@@ -18,6 +18,8 @@ public class BalancoAnualLoop {
 			
 			soma = soma + gastoMes;
 			
+			leia.close();
+			
 			if(i > 9 && i <= 12) {
 					soma4 = soma4 + gastoMes;
 			}else if (i > 6 && i <= 9) {
@@ -35,7 +37,6 @@ public class BalancoAnualLoop {
 		System.out.println("A soma dos gastos do 4 trimestre é " + soma4);
 		System.out.println("Você gastou R$ " + soma + " em " + (i - 1) + " meses");
 		
-		leia.close();
 	}
 	
 	
