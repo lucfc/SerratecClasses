@@ -1,0 +1,56 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.est {
+    background: blue;
+    top: 0;
+    left: 0;
+}
+
+.dit {
+    background: red;
+    top:0px;
+    right: 0px;
+    align-items: flex-end;
+}
+
+.did {
+    background: gray;
+    bottom: 0px;
+    right: 0px;
+    align-items: flex-end;
+}
+
+.esd {
+    background: green;
+    bottom: 0px;
+    left: 0px;
+    align-items: flex-end;
+}
+
+.center{
+    background: yellow;
+    top: calc(50% - 200px/2);
+    left: calc(50% - 200px/2)
+   
+} */
+
+
+h1{
+    color: #333;
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
