@@ -1,0 +1,560 @@
+/* Atributos Globais =========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+li{
+    text-decoration: none;
+    padding: 1%;
+}
+
+body{
+    /* background-color: #e5e5e5; */
+    background: url(../../Assets/bg.jpg);
+}
+
+/* Header =========================== */
+
+header{
+    width: 100%;
+    height: fit-content;
+    background: url(../../Assets/bg.jpg);
+}
+
+#leaguecom{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0%;
+    height: 60px;
+    background-color: rgb(107, 22, 39);
+}
+
+#img-jl{
+    /* width: 140px;
+    height: 28px; */
+    /* margin-top: 7px; */
+    margin-left: 10%;
+}
+
+#img-ecom{
+    width: 10%;
+    margin: 0.5%;
+    align-content: center;
+    margin-right: 10%;
+    
+}
+
+#img-lupa{
+    float: right;
+    height: 25px;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+#img-lupa-mobile{
+    display: none;
+} 
+
+#div-procura{
+    margin: auto;
+    background-color:#ffffff;
+    border-radius:15px;
+    width:400px;
+    align-items: center;
+}
+#div-procura-mobile {
+    display: none;
+}
+
+#procurador{
+    box-shadow: 0;
+    outline: 0;
+    float:left;
+    margin-left: 1%;
+    background: transparent;
+    border: none;
+    height: 35px;
+    width: 364px;
+    border-radius: 12px;
+}
+#procurador-mobile {
+    display: none;
+}
+/* barra de pesquisa para nav mobile */
+@media screen and (max-width: 857px) {
+    #procurador {
+        display: none;
+    }
+    #div-procura {
+        display: none;
+    }
+    #img-lupa {
+        display: none;
+    }
+    #div-procura-mobile {
+        display: block;
+        margin: auto;
+        background:#ffffff;
+        border-radius:15px;
+        width:400px;
+        align-items: center;
+    }
+    #procurador-mobile {
+        display: block;
+        box-shadow: 0;
+        outline: 0;
+        float:left;
+        margin-left: 1%;
+        border: none;
+        height: 35px;
+        width: 364px;
+        border-radius: 12px;
+    }
+    #img-lupa-mobile{
+        display: flex;
+        float: right;
+        height: 25px;
+        margin-right: 1%;
+        margin-top: 1%;
+    }
+}
+
+#img-funko{
+    /* border: 1px solid white; */
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    max-height: 75%;
+    padding-top: 1%;
+    align-content: center;
+}
+
+/* Menu Navegação ========================= */
+
+/* #nav-header img{
+    margin-top: 1.2px;
+    margin-left: 1%;
+    width: 45px;
+    height: 45px;
+} */
+
+#nav-mobile {
+    display: none;
+}
+
+#nav-header ul{
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#nav-header a{
+    font-size: 24px;
+    text-decoration: none; 
+    color: white;
+}
+
+#nav-header {
+    height: 50px;
+    background: rgb(175,31,36);
+}
+
+.nav-buttons {
+    display: grid;
+    width: 25%;
+    height: 3.8vw;
+    text-align: center;
+}
+
+.nav-buttons:hover {
+    background: rgb(117, 10, 14);
+    display: grid;
+    grid-column: auto auto auto auto;
+}
+/* nav mobile */
+@media screen and (max-width: 857px) {
+    #img-ecom {
+        display: none;
+    }
+    #img-jl {
+        display: block;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+    #nav-mobile {
+        display: flex;
+        margin: auto;
+        align-self: center;
+        font-size: 16px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 2% 0;
+        gap: 1vw;
+        color: white;
+    }
+    .nav-buttons {
+        display: block;
+        margin: auto;
+    }
+    #nav-header {
+        display: block;
+        position: relative;
+        width: 100%;
+        /*top: 27vh;*/
+        right: 0;
+        background: rgb(175,31,36);
+        height: 0px;
+        transition: .3s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav-header ul{
+        display: block;
+        visibility: hidden;
+    }
+    #nav-header.active{
+        height: fit-content;
+        visibility: visible;
+    }
+    #nav-header.active ul{
+        display: block;
+        visibility: visible;
+    }
+    #nav-header.active ul li{
+        width: 100%;
+        height: 60px;
+        border-bottom: 2px solid rgba(31, 24, 26, 0.568)
+    }
+    #nav-icon {
+        align-self: center;
+        border-top: 2px solid white;
+        width: 20px;
+    }
+    #nav-icon::after, #nav-icon::before{
+        content: '' ;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav-icon.active {
+        border-top-color: transparent;
+    }
+    #nav-icon.active::before {
+        transform: rotate(135deg);
+    }
+    #nav-icon.active::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/* Main =========================== */
+main{
+    height: 100%;
+}
+/* Inicio =========================== */
+
+
+/* #img-carrosel{
+    list-style-type: none;
+    
+}
+
+#img-carrosel img{
+    box-shadow: 1vh 1vh 5vh #e5e5e59b ;
+    border-radius: 5vh;
+    width: 90%;
+    max-width: 90%;
+    object-fit:cover;
+    display: flex;
+    align-content: center;
+    max-height: 50vh;
+    margin: auto;
+} */
+
+@media screen and (max-width:1100px) {
+    .carousel-inner {
+        height: 40vh !important;
+    }
+}
+
+@media screen and (max-width:857px) {
+    .carousel-inner {
+        height: 35vh !important;
+    }
+}
+
+@media screen and (max-width:606px) {
+    .carousel-inner {
+        height: 30vh !important;
+    }
+}
+@media screen and (max-width:504px) {
+    .carousel-inner {
+        height: 25vh !important;
+    }
+}
+@media screen and (max-width:410px) {
+    .carousel-inner {
+        height: 20vh !important;
+    }
+}
+/* #spotlight{
+    background-color: #ffffff; 
+    margin: 1%;
+    border-radius: 1vw;
+} 
+*/
+
+#spotlight h2{
+    color: #fff;
+    margin-left: 2%;
+    margin-bottom: 1%; 
+}
+
+#spotlight div{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    gap: 2%;
+    padding-left: 1.5%;
+}
+
+@media screen and (max-width:996px) {
+    #spotlight div{
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 40% 40%;
+        gap: 2%;
+        margin-bottom: 4%;
+    }
+}
+
+@media screen and (max-width:694px) {
+    #spotlight div{
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 55%;
+        gap: 2%;
+        margin-bottom: 4%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    #spotlight div{
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 80%;
+        gap: 2%;
+        margin-bottom: 4%;
+    }
+}
+
+.product-spotlight{
+    background-color: #ffffff;
+    text-align: center;
+    height: fit-content;
+    min-height: 76vh;
+    border: 0.5vh solid black;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+.product-spotlight h3{
+    margin: 3vh 0;
+    font-weight: 600;
+    vertical-align: middle;
+    font-size: 2.5vh;
+}
+
+.product-spotlight img{
+    border-radius: 100%;
+    padding-top: 1vh;
+    margin: 2%;
+    max-width: 90%;
+    height: 35vh;
+}
+
+.product-spotlight p{
+    margin-left: 1vh;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 2vh;
+}
+
+.product-spotlight #preço p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+.add-cart{
+    margin-top: 0.5vh;
+    margin-bottom: 1vh;
+    height: 7vh;
+    width: 35vh;
+    border-radius: 10vh;
+    background-color: #CD9955;
+    font-size: 2.235vh;
+    font-weight: bold;
+    border: 2px solid;
+}
+
+.add-cart:hover{
+    background-color: #a1691f;
+    cursor: pointer;
+}
+
+/* Atributos Footer =========================== */
+footer{
+    /* position: absolute; */
+    bottom: 0;
+    margin-top: 2vh;
+    /* border: 1px solid black; */
+    background-color: rgb(175,31,36);
+    width: 100%;
+    height: fit-content;
+    margin-bottom: -100vh;
+}
+
+#container-general-footer{
+    display: flex;
+    height: fit-content;
+    position: relative;
+    bottom: 0;
+}
+
+#container-about{
+    /* border: 1px solid black; */
+    /* border: 1px solid black; */
+    width: 33%;
+    color: white;
+    margin-left: 1%;
+}
+
+#about-mobile {
+   position: absolute;
+   visibility: hidden;
+}
+
+@media screen and (max-width:700px) {
+    footer{
+        margin-top: 25vh;
+    }
+    #about-mobile {
+        visibility: visible;
+        position: relative;
+        width: fit-content;
+        border:none;
+        background: none;
+        text-decoration: underline;
+        font-size: 5vw;
+     }
+    #container-about .info-loja {
+        visibility: hidden;
+        display: none;
+    }   
+}
+
+#logo-footer{
+    width: 33%;
+    text-align: center;
+}
+
+#logo-footer img{
+    width:23.5vw;
+}
+
+.media-logo{
+    width: 23.5vw;
+    margin: auto;
+    width: 50%;
+}
+
+/* Responsividade 
+@media screen and (max-width: 450px) {
+    #logo-footer img{
+        width: 60%;
+    }
+
+    #container-contact{
+        position: absolute;
+        right: 0;
+        border: 1px solid black;
+        text-align: right;
+        width: 33%;
+        margin-right: 10px;
+        color: white;  
+        font-size: 10px;
+    }
+}
+*/
+#container-contact{
+    position: absolute;
+    right: 0;
+    /* border: 1px solid black; */
+    text-align: right;
+    width: 33%;
+    margin-right: 1%;
+    color: white;  
+
+}
+
+#contact-mobile {
+    position:absolute;
+    visibility: hidden;
+}
+
+@media screen and (max-width:950px) {
+    #contact-mobile {
+        position: relative;
+        margin-right: 1vw;
+        padding-right: 1vw;
+        visibility: visible;
+        font-size: 5vw;
+        border:none;
+        background: none;
+        text-decoration: underline;
+    }
+    .contact-info {
+        /* position: absolute; */
+        display: none;
+        visibility: hidden;
+    }
+ 
+}
+
+#midiaSocial{
+    display: grid;
+    grid-template-columns: auto auto auto;
+/* formata os links =========================== */
+}
+
+address a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#copyright address{
+    text-align: right;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-right: 1%;
+    margin-top: 1%;
+    font-size: 1vw;
+}
+
+#container-contact address a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}

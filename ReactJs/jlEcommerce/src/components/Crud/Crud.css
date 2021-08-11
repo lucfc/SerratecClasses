@@ -1,0 +1,73 @@
+.Crud {
+    background-color: #e5e5e5;
+    padding: 3%;
+}
+
+.Button:hover {
+    filter: brightness(0.9);    
+}
+
+.wrapper {
+    width: 100%;
+  }
+  
+  .tabs {
+    display: flex;
+    bottom: 0;
+  }
+  
+  .tabitem {
+    border-right: 0.1vw solid #fff;
+    cursor: pointer;
+    width: 15%;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tabitem--inactive {
+    background-color: #515151;
+  }
+  
+  .tabitem__title {
+    color: black;
+    margin: 2vh 0;
+  }
+  
+  .contentC {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 670px) {
+
+    .tabitem__title {
+      color: black;
+      margin: 2vh 0;
+      font-size: smaller;
+      padding: 5px 10px;
+    }
+
+    .tabs {
+      display: flex;
+      bottom: 0;
+      width: fit-content;
+    }
+    
+  }
+
+  @media screen and (max-width: 580px) {
+
+    .tabitem__title {
+      color: black;
+      margin: 2vh 0;
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    .tabs {
+      display: flex;
+      bottom: 0;
+      width: fit-content;
+    }
+    
+  }
